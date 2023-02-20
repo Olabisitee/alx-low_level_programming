@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - C program that prints a new line with printf function
  *
