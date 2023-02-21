@@ -1,8 +1,8 @@
 #include "main.h"
 /** main - prints putchar
  * Return: 0
- * int _putchar(char)
  */
+int '_putchar'(char)
 {
 	_putchar('_');
 	_putchar('p');
