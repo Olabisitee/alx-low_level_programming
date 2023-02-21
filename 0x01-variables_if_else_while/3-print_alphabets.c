@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 /**
- * main - a program that prints out the alphabet using putchar
+ * main - a program that prints out the alphabet in lower and uppercase
  * Return: 0
  */
 
@@ -15,6 +15,16 @@ int main(void)
 	for (; x <= 'Z'; x++)
 	{
 		putchar (tolower(x));
+
+		if (x == 'Z')
+		{
+			int x = 'A';
+
+			for (; x <= 'Z'; x++)
+			{
+				putchar (x);
+			}
+		}
 	}
 	putchar ('\n');
 
