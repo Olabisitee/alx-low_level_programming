@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 
 /**
@@ -8,22 +9,24 @@
 
 int main(void)
 {
-	int number[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+	int n1, n2;
 
-	int n;
-
-	for (n = 0; n < 10; n++)
+	for (n1 = 0; n1 < 9; n1++)
 	{
-		putchar(number[n]);
-
-		if (number[n] != '9')
+		for (n2 = n1 + 1; n2 < 10; n2++)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar((n1 % 10) + '0');
+			putchar((n2 % 10) + '0');
+
+			if (n1 + n2 != 17)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 
-	putchar ('\n');
+	putchar('\n');
 
 	return (0);
 }
