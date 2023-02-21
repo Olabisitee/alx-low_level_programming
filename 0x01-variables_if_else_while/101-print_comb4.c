@@ -3,25 +3,29 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible combinations of single-digit numbers
+ * main - this program prints possible different combinations of three digits.
  * Return: 0
  */
 
 int main(void)
 {
-	int n1, n2;
+	int n1, n2, n3;
 
-	for (n1 = 0; n1 < 9; n1++)
+	for (n1 = 0; n1 < 8; n1++)
 	{
-		for (n2 = n1 + 1; n2 < 10; n2++)
+		for (n2 = n1 + 1; n2 < 9; n2++)
 		{
-			putchar((n1 % 10) + '0');
-			putchar((n2 % 10) + '0');
-
-			if (n1 + n2 != 17)
+			for (n3 = n2 + 1; n3 < 10; n3++)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar((n1 % 10) + '0');
+				putchar((n2 % 10) + '0');
+				putchar((n3 % 10) + '0');
+
+				if (n1 + n2 + n3 != 24)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
