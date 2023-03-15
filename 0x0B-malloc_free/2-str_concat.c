@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  *_strlen - count arrray
  *@s: array of elements
@@ -32,8 +33,8 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, j, size;
 
 	/ If the array is empty /
-	if (s1 == NULL)
-		s1 = "";
+		if (s1 == NULL)
+			s1 = "";
 
 	if (s2 == NULL)
 		s2 = "";
@@ -49,7 +50,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	/ Concatenate arrays /
+	/ Concatenate array /
 		for (i = 0; *(s1 + i) != '\0'; i++)
 			*(dst + i) = *(s1 + i);
 
